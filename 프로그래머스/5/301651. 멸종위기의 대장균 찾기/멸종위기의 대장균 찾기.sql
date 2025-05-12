@@ -1,3 +1,5 @@
+-- 관련 문법 정리 https://silver-w.tistory.com/164
+
 WITH RECURSIVE 
 tmp AS (
     -- 1단계 : 부모가 없는 루트 노드
