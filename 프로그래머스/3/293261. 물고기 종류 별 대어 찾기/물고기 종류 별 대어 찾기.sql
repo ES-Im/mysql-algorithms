@@ -1,3 +1,4 @@
+# JOIN, MAX 이용
 select f.id id, fi.fish_name fish_name, f.length length
 from fish_info f
 join  (select fish_type, MAX(LENGTH) as length
@@ -6,6 +7,7 @@ join  (select fish_type, MAX(LENGTH) as length
 on f.fish_type = tmp.fish_type and f.length = tmp.length
 join fish_name_info fi on f.fish_type = fi.fish_type
 
+# 윈도우 함수 이용
 SELECT f.id, fi.fish_name, f.length
 FROM (
     SELECT *, ROW_NUMBER() OVER (PARTITION BY fish_type ORDER BY length DESC) as rn
