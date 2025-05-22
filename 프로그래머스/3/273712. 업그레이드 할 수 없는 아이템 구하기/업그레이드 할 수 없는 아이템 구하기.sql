@@ -1,3 +1,5 @@
+# 관련 문법 : https://silver-w.tistory.com/171
+
 with getId as (
     select item_id from item_tree t1
     where not exists (
